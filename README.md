@@ -20,8 +20,6 @@ No installation, dependencies, or build step are needed to run the project local
 ## Project structure
 
 MESSI-ETERNAL-ARCHIVE
-.
-.
 ├── index.html
 ├── messi-wc22.png
 └── css/
@@ -30,7 +28,6 @@ MESSI-ETERNAL-ARCHIVE
     ├── 03-tactical-pitch.css
     ├── 04-3d-trophies.css
     └── 05-timeline-scroll.css
-```
 
 The CSS files are loaded in order from `index.html`:
 
