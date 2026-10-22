@@ -32,25 +32,102 @@
        ================================================================= -->
     <header class="site-header">
         <div class="watermark-number" aria-hidden="true">10</div>
-        <p class="pre-title">THE ETERNAL ARCHIVE • ZERO-JS INTERACTIVE DOSSIER</p>
+        <p class="pre-title">THE ETERNAL ARCHIVE • INTERACTIVE DOSSIER</p>
         <h1 class="hero-title">LIONEL ANDRÉS MESSI</h1>
         <p class="hero-subtitle">
             Select an era below to morph the interface theme, tactical telemetry, and career records in real time.
         </p>
 
         <nav class="era-dock" aria-label="Career Era Switcher">
-            <label for="era-arg" class="era-btn">🇦🇷 La Albiceleste</label>
-            <label for="era-barca" class="era-btn">🔵🔴 FC Barcelona</label>
-            <label for="era-psg" class="era-btn">🗼 Paris SG</label>
-            <label for="era-miami" class="era-btn">🦩 Inter Miami</label>
-            <label for="era-origins" class="era-btn">🌱 Rosario &amp; La Masia</label>
+            <!-- 1. Argentina Flag -->
+            <label for="era-arg" class="era-btn">
+                <svg class="flag-icon" viewBox="0 0 30 20" aria-hidden="true">
+                    <rect width="30" height="20" fill="#38bdf8" />
+                    <rect y="6.6" width="30" height="6.8" fill="#ffffff" />
+                    <circle cx="15" cy="10" r="2.3" fill="#eab308" />
+                </svg>
+                La Albiceleste
+            </label>
+
+            <!-- 2. Spain / Blaugrana Flag -->
+            <label for="era-barca" class="era-btn">
+                <svg class="flag-icon" viewBox="0 0 30 20" aria-hidden="true">
+                    <rect width="30" height="20" fill="#004d98" />
+                    <rect x="6" width="6" height="20" fill="#a50044" />
+                    <rect x="18" width="6" height="20" fill="#a50044" />
+                    <rect y="7" width="30" height="6" fill="#facc15" />
+                    <rect y="8.5" width="30" height="3" fill="#dc2626" />
+                </svg>
+                FC Barcelona
+            </label>
+
+            <!-- 3. France Flag -->
+            <label for="era-psg" class="era-btn">
+                <svg class="flag-icon" viewBox="0 0 30 20" aria-hidden="true">
+                    <rect width="10" height="20" fill="#1d4ed8" />
+                    <rect x="10" width="10" height="20" fill="#ffffff" />
+                    <rect x="20" width="10" height="20" fill="#ef4444" />
+                </svg>
+                Paris SG
+            </label>
+
+            <!-- 4. USA Flag -->
+            <label for="era-miami" class="era-btn">
+                <svg class="flag-icon" viewBox="0 0 30 20" aria-hidden="true">
+                    <rect width="30" height="20" fill="#ef4444" />
+                    <rect y="3" width="30" height="2.8" fill="#ffffff" />
+                    <rect y="8.5" width="30" height="2.8" fill="#ffffff" />
+                    <rect y="14" width="30" height="2.8" fill="#ffffff" />
+                    <rect width="14" height="11.3" fill="#1e3a8a" />
+                    <circle cx="4" cy="3.5" r="1" fill="#ffffff" />
+                    <circle cx="10" cy="3.5" r="1" fill="#ffffff" />
+                    <circle cx="7" cy="5.7" r="1" fill="#ffffff" />
+                    <circle cx="4" cy="8" r="1" fill="#ffffff" />
+                    <circle cx="10" cy="8" r="1" fill="#ffffff" />
+                </svg>
+                Inter Miami
+            </label>
+
+            <!-- 5. Rosario (Newell's Red/Black) & La Masia Flag -->
+            <label for="era-origins" class="era-btn">
+                <svg class="flag-icon" viewBox="0 0 30 20" aria-hidden="true">
+                    <polygon points="0,0 30,0 0,20" fill="#dc2626" />
+                    <polygon points="30,0 30,20 0,20" fill="#111827" />
+                    <line x1="0" y1="20" x2="30" y2="0" stroke="#facc15" stroke-width="2" />
+                </svg>
+                Rosario &amp; La Masia
+            </label>
         </nav>
+
     </header>
 
     <!-- =================================================================
        MAIN BENTO DASHBOARD
        ================================================================= -->
     <main class="dashboard">
+        <!-- GLOBAL 2004–2026 ALL-TIME SUMMARY RIBBON -->
+        <section class="bento-card career-totals-ribbon">
+            <div class="ribbon-item">
+                <span class="ribbon-val">936+</span>
+                <span class="ribbon-lbl">Total CareerGoals (2004–2026)</span>
+            </div>
+            <div class="ribbon-item">
+                <span class="ribbon-val">1,181+</span>
+                <span class="ribbon-lbl">Total Appearances</span>
+            </div>
+            <div class="ribbon-item">
+                <span class="ribbon-val">427+</span>
+                <span class="ribbon-lbl">Total Career Assists</span>
+            </div>
+            <div class="ribbon-item">
+                <span class="ribbon-val">76+</span>
+                <span class="ribbon-lbl">Total Free-Kick Goals</span>
+            </div>
+            <div class="ribbon-item">
+                <span class="ribbon-val">48</span>
+                <span class="ribbon-lbl">Total Career Trophies (WR)</span>
+            </div>
+        </section>
 
         <!-- MODULE 1: DYNAMIC ERA TELEMETRY -->
         <section class="bento-card stats-panel">
@@ -61,16 +138,18 @@
                 <p class="era-desc">
                     From Olympic Gold in Beijing (2008) and three agonizing final heartbreaks (2014–2016) to leading the
                     greatest international run in modern history: back-to-back Copa América titles (2021, 2024), the
-                    2022 Finalissima, and the 2022 FIFA World Cup in Qatar.
+                    2022 Finalissima, the 2022 FIFA World Cup Campion in Qatar, the 2026 FIFA World cup Runners Up along
+                    with dropping a single handedly carryjob WC Campaign, having scored 8 goals & 4 assists extending
+                    his record as the 2nd all-time top scorer in World Cup history with 21 goals.
                 </p>
                 <div class="stat-grid">
                     <div class="stat-box">
                         <div class="stat-num">126</div>
-                        <div class="stat-label">International Goals</div>
+                        <div class="stat-label">Total International Goals</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">208</div>
-                        <div class="stat-label">All-Time Caps (Record)</div>
+                        <div class="stat-label">Total International Appearances (Record)</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">6</div>
@@ -78,7 +157,7 @@
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">2x</div>
-                        <div class="stat-label">World Cup Golden Ball</div>
+                        <div class="stat-label"> FIFA World Cup Golden Ball (2014, 2022)</div>
                     </div>
                 </div>
             </div>
@@ -86,24 +165,24 @@
             <!-- Barcelona Content -->
             <div class="era-stat-content stat-barca">
                 <span class="era-badge">2004 – 2021 • CAMP NOU DYNASTY</span>
-                <h2>🔵🔴 The Blaugrana Peak</h2>
+                <h2>The Blaugrana Peak</h2>
                 <p class="era-desc">
                     Signed on a paper napkin at age 13, Messi redefined football at FC Barcelona—winning two historic
-                    trebles (2009, 2015), 10 La Liga crowns, and 4 UEFA Champions League titles while becoming the
+                    trebles (2008-09, 2014-15), 10 La Liga crowns, and 4 UEFA Champions League titles while becoming the
                     highest single-club scorer in history.
                 </p>
                 <div class="stat-grid">
                     <div class="stat-box">
                         <div class="stat-num">672</div>
-                        <div class="stat-label">Official Club Goals</div>
+                        <div class="stat-label">Total Club Goals</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-num">303</div>
-                        <div class="stat-label">Official Club Assists</div>
+                        <div class="stat-num">269</div>
+                        <div class="stat-label">Total Club Assists</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">778</div>
-                        <div class="stat-label">Appearances (Record)</div>
+                        <div class="stat-label">Total Club Appearances (Record)</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">35</div>
@@ -115,7 +194,7 @@
             <!-- PSG Content -->
             <div class="era-stat-content stat-psg">
                 <span class="era-badge">2021 – 2023 • PARC DES PRINCES</span>
-                <h2>🗼 The Parisian Playmaker</h2>
+                <h2>The Parisian Playmaker</h2>
                 <p class="era-desc">
                     Operating as a deep-lying attacking orchestrator in Ligue 1, Messi topped Europe's playmaking charts
                     and refined the tactical tempo that propelled him to his 2022 World Cup triumph mid-season.
@@ -123,15 +202,15 @@
                 <div class="stat-grid">
                     <div class="stat-box">
                         <div class="stat-num">32</div>
-                        <div class="stat-label">Goals Scored</div>
+                        <div class="stat-label">Total Goals Scored</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">35</div>
-                        <div class="stat-label">Assists Provided</div>
+                        <div class="stat-label">Total Assists Provided</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">75</div>
-                        <div class="stat-label">Appearances</div>
+                        <div class="stat-label">Total Appearances</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">3</div>
@@ -151,16 +230,16 @@
                 </p>
                 <div class="stat-grid">
                     <div class="stat-box">
-                        <div class="stat-num">106</div>
-                        <div class="stat-label">Miami Career Goals</div>
+                        <div class="stat-num">106+</div>
+                        <div class="stat-label">Total Goals Scored</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-num">120</div>
-                        <div class="stat-label">Miami Appearances</div>
+                        <div class="stat-num">120+</div>
+                        <div class="stat-label">Total Appearances</div>
                     </div>
                     <div class="stat-box">
-                        <div class="stat-num">46+</div>
-                        <div class="stat-label">Total Career Trophies (WR)</div>
+                        <div class="stat-num">57+</div>
+                        <div class="stat-label">Total Assists</div>
                     </div>
                     <div class="stat-box">
                         <div class="stat-num">#1</div>
@@ -427,7 +506,7 @@
                         <div class="card-glare"></div>
                         <div class="trophy-top">
                             <span class="trophy-tag">EUROPEAN TOP SCORER</span>
-                            <h3 class="trophy-title">GOLDEN SHOE</h3>
+                            <h3 class="trophy-title">GOLDEN BOOT</h3>
                         </div>
                         <div class="trophy-number">06</div>
                         <p class="trophy-years">2010 (34) • 2012 (50) • 2013 (46) • 2017 (37) • 2018 (34) • 2019 (36)

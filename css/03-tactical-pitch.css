@@ -1,0 +1,160 @@
+/* ==========================================================================
+   03-TACTICAL-PITCH.CSS
+   Interactive SVG Football Pitch, Trajectory Animations & Native Popover API
+   ========================================================================== */
+
+.pitch-panel {
+    grid-column: span 12;
+}
+
+@media (min-width: 960px) {
+    .pitch-panel {
+        grid-column: span 7;
+    }
+}
+
+.panel-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.panel-hint {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+.pitch-container {
+    position: relative;
+    background: linear-gradient(135deg, #062c21, #041d16);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 18px;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.pitch-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* SVG Goal Trajectories (Animated via stroke-dashoffset on Hotspot Hover) */
+.trajectory {
+    stroke-dasharray: 450;
+    stroke-dashoffset: 450;
+    transition: stroke-dashoffset 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.35));
+}
+
+.pitch-container:has(.hotspot-getafe:hover) .traj-getafe,
+.pitch-container:has(.hotspot-madrid:hover) .traj-madrid,
+.pitch-container:has(.hotspot-lfc:hover) .traj-lfc,
+.pitch-container:has(.hotspot-lusail:hover) .traj-lusail {
+    stroke-dashoffset: 0;
+}
+
+/* Pitch Coordinates Hotspot Buttons */
+.hotspot-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    font-weight: 900;
+    font-size: 0.72rem;
+    color: #050505;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hotspot-btn:hover {
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+.hotspot-getafe {
+    top: 66%;
+    left: 52%;
+    background: #38bdf8;
+    box-shadow: 0 0 0 6px rgba(56, 189, 248, 0.3);
+}
+
+.hotspot-madrid {
+    top: 50%;
+    left: 58%;
+    background: #f43f5e;
+    box-shadow: 0 0 0 6px rgba(244, 63, 94, 0.3);
+}
+
+.hotspot-lfc {
+    top: 61%;
+    left: 72%;
+    background: #a855f7;
+    box-shadow: 0 0 0 6px rgba(168, 85, 247, 0.3);
+}
+
+.hotspot-lusail {
+    top: 48%;
+    left: 89%;
+    background: #eab308;
+    box-shadow: 0 0 0 6px rgba(234, 179, 8, 0.35);
+}
+
+/* Native HTML5 Popover Modals */
+.goal-modal {
+    margin: auto;
+    background: #0f172a;
+    color: var(--text-main);
+    border: 1px solid var(--era-primary);
+    border-radius: 20px;
+    padding: 1.85rem;
+    max-width: 440px;
+    width: calc(100% - 2rem);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+}
+
+.goal-modal::backdrop {
+    background: rgba(4, 6, 12, 0.75);
+    backdrop-filter: blur(6px);
+}
+
+.modal-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--era-primary);
+}
+
+.goal-modal h3 {
+    margin: 0.4rem 0 0.65rem;
+    font-size: 1.25rem;
+}
+
+.goal-modal p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+.modal-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-meta span {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.06);
+    padding: 0.3rem 0.65rem;
+    border-radius: 8px;
+    color: var(--gold);
+    font-weight: 700;
+}
