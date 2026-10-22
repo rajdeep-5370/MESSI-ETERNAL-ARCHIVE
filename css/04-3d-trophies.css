@@ -3,21 +3,24 @@
    Pure-CSS 9-Zone 3D Matrix Cursor Tracking & Holographic Foil Cards
    ========================================================================== */
 
-.trophy-vault-panel {
-    grid-column: span 12;
-}
 
-@media (min-width: 960px) {
-    .trophy-vault-panel {
-        grid-column: span 6;
-    }
-}
 
+/* Gives the trophy vault grid breathing room so cards never overflow downwards */
 .vault-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.25rem;
-    margin-top: 0.75rem;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem; /* <--- This pushes the timeline down */
+}
+
+/* Ensures the entire trophy vault bento card contains its 3D tilt stage cleanly */
+.trophy-vault-panel {
+    grid-column: span 12;
+    padding-bottom: 2.5rem; /* <--- Adds internal padding at the bottom */
+}
+@media (min-width: 960px) {
+    .trophy-vault-panel { grid-column: span 6; }
 }
 
 .tilt-stage {
