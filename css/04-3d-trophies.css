@@ -80,23 +80,90 @@
 .trophy-title {
     font-size: 1.4rem;
     font-weight: 900;
-    color: var(--gold);
+    color: #fde047;
     margin-top: 0.2rem;
+    text-shadow: 0 2px 10px rgba(250, 204, 21, 0.35);
 }
 
+/* Bright 24K Metallic Gold 08 & 06 */
 .trophy-number {
-    font-size: 4.5rem;
+    font-size: 5rem;
     font-weight: 900;
     line-height: 1;
-    color: rgba(234, 179, 8, 0.25);
+    margin: 0.35rem 0;
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #fef08a 28%,
+        #facc15 62%,
+        #ca8a04 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
+    filter:
+        drop-shadow(0 3px 3px rgba(0, 0, 0, 0.95))
+        drop-shadow(0 0 20px rgba(250, 204, 21, 0.6));
     transform: translateZ(50px);
 }
 
+/* Formatted Golden Plaque Box (Works even if you don't edit index.html) */
 .trophy-years {
-    font-size: 0.76rem;
-    color: var(--text-muted);
-    line-height: 1.4;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #fef9c3;
+    line-height: 1.65;
+    letter-spacing: 0.03em;
+    text-align: center;
+    background: rgba(250, 204, 21, 0.08);
+    border: 1px solid rgba(250, 204, 21, 0.35);
+    border-radius: 12px;
+    padding: 0.6rem 0.75rem;
+    box-shadow: inset 0 0 12px rgba(250, 204, 21, 0.08);
     transform: translateZ(25px);
+}
+
+/* Optional Grid Pill Support (If you also added .year-pill in index.html) */
+.trophy-years.grid-4,
+.trophy-years.grid-3 {
+    display: grid;
+    gap: 0.45rem;
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+}
+
+.trophy-years.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.trophy-years.grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.year-pill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+    background: rgba(250, 204, 21, 0.12);
+    border: 1px solid rgba(250, 204, 21, 0.4);
+    border-radius: 8px;
+    padding: 0.35rem 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.year-pill em {
+    font-style: normal;
+    font-size: 0.68rem;
+    color: #fde047;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
 }
 
 /* 9-Zone 3D Rotations Powered by :has() */
