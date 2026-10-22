@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Interactive Zero-JS Career Archive of Lionel Messi built purely with modern HTML5 and CSS3." />
+    <title>MESSI 10 // The Eternal Archive</title>
+
+    <!-- Parallel Modular CSS Architecture -->
+    <link rel="stylesheet" href="css/01-tokens-themes.css" />
+    <link rel="stylesheet" href="css/02-base-layout.css" />
+    <link rel="stylesheet" href="css/03-tactical-pitch.css" />
+    <link rel="stylesheet" href="css/04-3d-trophies.css" />
+    <link rel="stylesheet" href="css/05-timeline-scroll.css" />
+</head>
+
+<body>
+
+    <!-- =================================================================
+       GLOBAL STATE RADIO INPUTS (Powers Pure-CSS :has() Era Switching)
+       ================================================================= -->
+    <input type="radio" name="era" id="era-arg" class="era-radio" checked />
+    <input type="radio" name="era" id="era-barca" class="era-radio" />
+    <input type="radio" name="era" id="era-psg" class="era-radio" />
+    <input type="radio" name="era" id="era-miami" class="era-radio" />
+    <input type="radio" name="era" id="era-origins" class="era-radio" />
+
+    <!-- =================================================================
+       HERO & ERA SWITCHER DOCK
+       ================================================================= -->
+    <header class="site-header">
+        <div class="watermark-number" aria-hidden="true">10</div>
+        <p class="pre-title">THE ETERNAL ARCHIVE • ZERO-JS INTERACTIVE DOSSIER</p>
+        <h1 class="hero-title">LIONEL ANDRÉS MESSI</h1>
+        <p class="hero-subtitle">
+            Select an era below to morph the interface theme, tactical telemetry, and career records in real time.
+        </p>
+
+        <nav class="era-dock" aria-label="Career Era Switcher">
+            <label for="era-arg" class="era-btn">🇦🇷 La Albiceleste</label>
+            <label for="era-barca" class="era-btn">🔵🔴 FC Barcelona</label>
+            <label for="era-psg" class="era-btn">🗼 Paris SG</label>
+            <label for="era-miami" class="era-btn">🦩 Inter Miami</label>
+            <label for="era-origins" class="era-btn">🌱 Rosario &amp; La Masia</label>
+        </nav>
+    </header>
+
+    <!-- =================================================================
+       MAIN BENTO DASHBOARD
+       ================================================================= -->
+    <main class="dashboard">
+
+        <!-- MODULE 1: DYNAMIC ERA TELEMETRY -->
+        <section class="bento-card stats-panel">
+            <!-- Argentina Content -->
+            <div class="era-stat-content stat-arg">
+                <span class="era-badge">2005 – PRESENT • SENIOR NATIONAL TEAM</span>
+                <h2>🇦🇷 The Eternal Captain</h2>
+                <p class="era-desc">
+                    From Olympic Gold in Beijing (2008) and three agonizing final heartbreaks (2014–2016) to leading the
+                    greatest international run in modern history: back-to-back Copa América titles (2021, 2024), the
+                    2022 Finalissima, and the 2022 FIFA World Cup in Qatar.
+                </p>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-num">126</div>
+                        <div class="stat-label">International Goals</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">208</div>
+                        <div class="stat-label">All-Time Caps (Record)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">6</div>
+                        <div class="stat-label">National Titles (Incl. U20/U23)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">2x</div>
+                        <div class="stat-label">World Cup Golden Ball</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Barcelona Content -->
+            <div class="era-stat-content stat-barca">
+                <span class="era-badge">2004 – 2021 • CAMP NOU DYNASTY</span>
+                <h2>🔵🔴 The Blaugrana Peak</h2>
+                <p class="era-desc">
+                    Signed on a paper napkin at age 13, Messi redefined football at FC Barcelona—winning two historic
+                    trebles (2009, 2015), 10 La Liga crowns, and 4 UEFA Champions League titles while becoming the
+                    highest single-club scorer in history.
+                </p>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-num">672</div>
+                        <div class="stat-label">Official Club Goals</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">303</div>
+                        <div class="stat-label">Official Club Assists</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">778</div>
+                        <div class="stat-label">Appearances (Record)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">35</div>
+                        <div class="stat-label">Major Trophies Won</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PSG Content -->
+            <div class="era-stat-content stat-psg">
+                <span class="era-badge">2021 – 2023 • PARC DES PRINCES</span>
+                <h2>🗼 The Parisian Playmaker</h2>
+                <p class="era-desc">
+                    Operating as a deep-lying attacking orchestrator in Ligue 1, Messi topped Europe's playmaking charts
+                    and refined the tactical tempo that propelled him to his 2022 World Cup triumph mid-season.
+                </p>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-num">32</div>
+                        <div class="stat-label">Goals Scored</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">35</div>
+                        <div class="stat-label">Assists Provided</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">75</div>
+                        <div class="stat-label">Appearances</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">3</div>
+                        <div class="stat-label">French Titles Won</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inter Miami Content -->
+            <div class="era-stat-content stat-miami">
+                <span class="era-badge">2023 – PRESENT • NORTH AMERICAN ERA</span>
+                <h2>🦩 The Pink Revolution</h2>
+                <p class="era-desc">
+                    Transforming Inter Miami CF from the bottom of the league into North American champions—capturing
+                    the 2023 Leagues Cup, the record-breaking 2024 Supporters' Shield, the 2025 MLS Title, and the 2026
+                    Campeones Cup.
+                </p>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-num">106</div>
+                        <div class="stat-label">Miami Career Goals</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">120</div>
+                        <div class="stat-label">Miami Appearances</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">46+</div>
+                        <div class="stat-label">Total Career Trophies (WR)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">#1</div>
+                        <div class="stat-label">Franchise All-Time Scorer</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rosario & Origins Content -->
+            <div class="era-stat-content stat-origins">
+                <span class="era-badge">1987 – 2004 • NEWWELL'S OLD BOYS &amp; LA MASIA</span>
+                <h2>🌱 The Machine of '87</h2>
+                <p class="era-desc">
+                    Born in Rosario, Santa Fe, Messi scored over 500 goals for Newell's Old Boys' youth side ("La
+                    Máquina del '87"), overcame growth hormone deficiency after relocating to Barcelona at 13, and raced
+                    through four youth ranks in a single season.
+                </p>
+                <div class="stat-grid">
+                    <div class="stat-box">
+                        <div class="stat-num">234</div>
+                        <div class="stat-label">Newell's Youth Goals</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">105</div>
+                        <div class="stat-label">La Masia Academy Goals</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">17y</div>
+                        <div class="stat-label">Age at Official Debut</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">Dec 14</div>
+                        <div class="stat-label">2000 Napkin Contract Date</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 2: INTERACTIVE TACTICAL PITCH & GOAL TRAJECTORIES -->
+        <section class="bento-card pitch-panel">
+            <div class="panel-header">
+                <div>
+                    <span class="era-badge">SPATIAL TELEMETRY</span>
+                    <h2>⚽ Anatomy of Iconic Goals</h2>
+                </div>
+                <p class="panel-hint">Hover nodes to trace ball path • Click node to open tactical dossier</p>
+            </div>
+
+            <div class="pitch-container">
+                <svg class="pitch-svg" viewBox="0 0 800 500" fill="none" aria-label="Football Pitch">
+                    <!-- Pitch Turf Stripes -->
+                    <g opacity="0.06" fill="#ffffff">
+                        <rect x="30" y="30" width="74" height="440" />
+                        <rect x="178" y="30" width="74" height="440" />
+                        <rect x="326" y="30" width="74" height="440" />
+                        <rect x="474" y="30" width="74" height="440" />
+                        <rect x="622" y="30" width="74" height="440" />
+                    </g>
+
+                    <!-- Pitch Boundary & Markings -->
+                    <rect x="30" y="30" width="740" height="440" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <line x1="400" y1="30" x2="400" y2="470" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <circle cx="400" cy="250" r="65" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <circle cx="400" cy="250" r="4" fill="rgba(255,255,255,0.5)" />
+                    <!-- Left Penalty Box -->
+                    <rect x="30" y="130" width="120" height="240" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <rect x="30" y="190" width="45" height="120" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <!-- Right Penalty Box -->
+                    <rect x="650" y="130" width="120" height="240" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <rect x="725" y="190" width="45" height="120" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" />
+                    <!-- Right Goal Net -->
+                    <rect x="770" y="215" width="14" height="70" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+
+                    <!-- Animated Trajectories -->
+                    <!-- 1. 2007 vs Getafe Solo Run -->
+                    <path class="trajectory traj-getafe" d="M 416 330 Q 530 340 620 260 T 745 215 L 772 242"
+                        stroke="#38bdf8" stroke-width="4" stroke-linecap="round" />
+                    <!-- 2. 2011 vs Real Madrid UCL Semi -->
+                    <path class="trajectory traj-madrid" d="M 465 250 Q 570 215 655 245 T 772 268" stroke="#f43f5e"
+                        stroke-width="4" stroke-linecap="round" />
+                    <!-- 3. 2019 vs Liverpool Free Kick -->
+                    <path class="trajectory traj-lfc" d="M 575 305 Q 685 335 772 220" stroke="#a855f7" stroke-width="4"
+                        stroke-dasharray="6 4" stroke-linecap="round" />
+                    <!-- 4. 2022 World Cup Final vs France -->
+                    <path class="trajectory traj-lusail" d="M 712 240 L 772 252" stroke="#eab308" stroke-width="5"
+                        stroke-linecap="round" />
+                </svg>
+
+                <!-- Interactive Pitch Hotspots (Triggers Native HTML Popover API) -->
+                <button class="hotspot-btn hotspot-getafe" popovertarget="modal-getafe"
+                    aria-label="2007 Getafe Goal">07</button>
+                <button class="hotspot-btn hotspot-madrid" popovertarget="modal-madrid"
+                    aria-label="2011 Real Madrid Goal">11</button>
+                <button class="hotspot-btn hotspot-lfc" popovertarget="modal-lfc"
+                    aria-label="2019 Liverpool Free Kick">19</button>
+                <button class="hotspot-btn hotspot-lusail" popovertarget="modal-lusail"
+                    aria-label="2022 World Cup Final Goal">22</button>
+            </div>
+        </section>
+
+        <!-- NATIVE POPOVER MODALS FOR TACTICAL PITCH -->
+        <div id="modal-getafe" popover class="goal-modal">
+            <span class="modal-tag">APRIL 18, 2007 • COPA DEL REY SEMIFINAL</span>
+            <h3>The "Ankara Messi" Solo Run vs. Getafe</h3>
+            <p>
+                Collecting the ball inside his own half near the right touchline, a 19-year-old Messi sprinted 60 meters
+                in 11 seconds—nutmegging Javier Paredes, weaving past four defenders, rounding goalkeeper Luis García,
+                and clipping the ball into the roof of the net in a near-identical recreation of Diego Maradona's 1986
+                Goal of the Century.
+            </p>
+            <div class="modal-meta">
+                <span>Distance: 60m</span>
+                <span>Touches: 13</span>
+                <span>Defenders Beaten: 6</span>
+            </div>
+        </div>
+
+        <div id="modal-madrid" popover class="goal-modal">
+            <span class="modal-tag">APRIL 27, 2011 • UCL SEMIFINAL 1ST LEG</span>
+            <h3>Conquering the Bernabéu vs. Real Madrid</h3>
+            <p>
+                In a tense Champions League El Clásico, Messi played a sharp one-two stationary give-and-go with Sergio
+                Busquets near the center circle, accelerated past Lassana Diarra, Sergio Ramos, and Raúl Albiol, and
+                slid a right-footed finish past Iker Casillas.
+            </p>
+            <div class="modal-meta">
+                <span>Minute: 87'</span>
+                <span>Assist: Sergio Busquets</span>
+                <span>Foot: Right</span>
+            </div>
+        </div>
+
+        <div id="modal-lfc" popover class="goal-modal">
+            <span class="modal-tag">MAY 1, 2019 • UCL SEMIFINAL 1ST LEG</span>
+            <h3>600th Club Goal: 35-Yard Free Kick vs. Liverpool</h3>
+            <p>
+                From 35 yards out, Messi bent a left-footed strike around the outside of Liverpool's wall and into the
+                top-left postage stamp past Alisson Becker—marking his 600th official goal for FC Barcelona.
+            </p>
+            <div class="modal-meta">
+                <span>Distance: 32m (35 yds)</span>
+                <span>Ball Speed: 109 km/h</span>
+                <span>Milestone: 600th Barca Goal</span>
+            </div>
+        </div>
+
+        <div id="modal-lusail" popover class="goal-modal">
+            <span class="modal-tag">DECEMBER 18, 2022 • FIFA WORLD CUP FINAL</span>
+            <h3>108' Extra-Time Strike vs. France (Lusail)</h3>
+            <p>
+                After already opening the scoring in the 23rd minute, Messi linked with Enzo Fernández and Lautaro
+                Martínez in the 108th minute of extra time, pouncing on Hugo Lloris's parry to fire Argentina 3–2 ahead
+                with his right foot before sealing the title in the shootout.
+            </p>
+            <div class="modal-meta">
+                <span>Minute: 108' (ET)</span>
+                <span>Award: 2nd WC Golden Ball</span>
+                <span>Result: 3–3 (4–2 Pen)</span>
+            </div>
+        </div>
+
+        <!-- MODULE 3: THE 2012 "91 GOALS" PURE-CSS DATA RADAR -->
+        <section class="bento-card record-2012-panel">
+            <span class="era-badge">ALL-TIME WORLD RECORD • CALENDAR YEAR 2012</span>
+            <h2>🔥 The 91-Goal Anomaly (2012)</h2>
+            <p class="era-desc">
+                In 2012, Messi shattered Gerd Müller's 40-year-old world record of 85 goals in a calendar year,
+                finishing with 91 goals and 22 assists in 69 games (averaging a goal contribution every 52 minutes).
+            </p>
+
+            <div class="viz-2012-layout">
+                <!-- Pure CSS Conic-Gradient Donut Chart -->
+                <div class="donut-wrapper">
+                    <div class="css-donut" role="img" aria-label="79 Barcelona goals and 12 Argentina goals">
+                        <div class="donut-center">
+                            <span class="donut-big">91</span>
+                            <span class="donut-sub">GOALS IN 69 APPS</span>
+                        </div>
+                    </div>
+                    <div class="donut-legend">
+                        <span><i class="dot-barca"></i> 79 FC Barcelona (86.8%)</span>
+                        <span><i class="dot-arg"></i> 12 Argentina (13.2%)</span>
+                    </div>
+                </div>
+
+                <!-- Pure CSS Custom-Property Bar Charts -->
+                <div class="bars-wrapper">
+                    <div class="bar-row">
+                        <div class="bar-header"><span>La Liga</span><span>59 Goals</span></div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--pct: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-header"><span>UEFA Champions League</span><span>13 Goals</span></div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--pct: 28%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-header"><span>International (Argentina)</span><span>12 Goals</span></div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--pct: 25%;"></div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <div class="bar-header"><span>Copa del Rey &amp; Supercopa</span><span>7 Goals</span></div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="--pct: 16%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 4: 9-ZONE PURE-CSS 3D HOLOGRAPHIC TROPHY VAULT -->
+        <section class="bento-card trophy-vault-panel">
+            <div class="panel-header">
+                <div>
+                    <span class="era-badge">9-ZONE CSS 3D MATRIX TRACKING</span>
+                    <h2>🏆 The Golden Vault (Hover to Tilt in 3D)</h2>
+                </div>
+            </div>
+
+            <div class="vault-grid">
+                <!-- Card 1: 8x Ballon d'Or -->
+                <div class="tilt-stage">
+                    <div class="tilt-grid" aria-hidden="true">
+                        <div class="z1"></div>
+                        <div class="z2"></div>
+                        <div class="z3"></div>
+                        <div class="z4"></div>
+                        <div class="z5"></div>
+                        <div class="z6"></div>
+                        <div class="z7"></div>
+                        <div class="z8"></div>
+                        <div class="z9"></div>
+                    </div>
+                    <div class="tilt-card">
+                        <div class="card-glare"></div>
+                        <div class="trophy-top">
+                            <span class="trophy-tag">INDIVIDUAL SUPREMACY</span>
+                            <h3 class="trophy-title">BALLON D'OR</h3>
+                        </div>
+                        <div class="trophy-number">08</div>
+                        <p class="trophy-years">2009 • 2010 • 2011 • 2012 • 2015 • 2019 • 2021 • 2023</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: 6x European Golden Shoe -->
+                <div class="tilt-stage">
+                    <div class="tilt-grid" aria-hidden="true">
+                        <div class="z1"></div>
+                        <div class="z2"></div>
+                        <div class="z3"></div>
+                        <div class="z4"></div>
+                        <div class="z5"></div>
+                        <div class="z6"></div>
+                        <div class="z7"></div>
+                        <div class="z8"></div>
+                        <div class="z9"></div>
+                    </div>
+                    <div class="tilt-card">
+                        <div class="card-glare"></div>
+                        <div class="trophy-top">
+                            <span class="trophy-tag">EUROPEAN TOP SCORER</span>
+                            <h3 class="trophy-title">GOLDEN SHOE</h3>
+                        </div>
+                        <div class="trophy-number">06</div>
+                        <p class="trophy-years">2010 (34) • 2012 (50) • 2013 (46) • 2017 (37) • 2018 (34) • 2019 (36)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODULE 5: SCROLL-DRIVEN CAREER TIMELINE & EXCLUSIVE ACCORDIONS -->
+        <section class="bento-card timeline-panel">
+            <span class="era-badge">CHRONOLOGICAL ARCHIVE • SCROLL-DRIVEN ANIMATIONS</span>
+            <h2>⏳ From Rosario to Immortality (1987 – 2026)</h2>
+            <p class="era-desc">
+                Click any milestone below to expand its tactical breakdown. Uses native HTML5 exclusive accordions
+                (opening one chapter automatically closes the previous one without JavaScript).
+            </p>
+
+            <div class="timeline-list">
+                <details name="messi-career" class="milestone-card" open>
+                    <summary>
+                        <span class="m-year">2000 – 2005</span>
+                        <span class="m-title">The Napkin Contract &amp; First Senior Goal</span>
+                    </summary>
+                    <div class="m-body">
+                        On December 14, 2000, Carles Rexach signed a commitment on a paper napkin in Barcelona to
+                        recruit 13-year-old Messi. He made his official La Liga debut on October 16, 2004 against
+                        Espanyol and scored his first senior goal on May 1, 2005 against Albacete off a Ronaldinho
+                        lobbed assist, before winning the 2005 FIFA U-20 World Cup Golden Ball and Golden Shoe.
+                    </div>
+                </details>
+
+                <details name="messi-career" class="milestone-card">
+                    <summary>
+                        <span class="m-year">2008 – 2009</span>
+                        <span class="m-title">The Number 10 Shirt, The False 9 &amp; The Sextuple</span>
+                    </summary>
+                    <div class="m-body">
+                        Inheriting the iconic #10 shirt under Pep Guardiola, Messi debuted the "False 9" role in the
+                        historic 6–2 victory at the Santiago Bernabéu, scored the towering header against Manchester
+                        United in the 2009 Rome UCL Final, and led Barcelona to an unprecedented six-trophy calendar
+                        year alongside his first Ballon d'Or.
+                    </div>
+                </details>
+
+                <details name="messi-career" class="milestone-card">
+                    <summary>
+                        <span class="m-year">2011 – 2012</span>
+                        <span class="m-title">Wembley Masterclass &amp; 91 Goals in a Calendar Year</span>
+                    </summary>
+                    <div class="m-body">
+                        Following a dominant 2011 Champions League final display at Wembley against Manchester United,
+                        Messi recorded 50 La Liga goals in the 2011–12 season and 91 goals across all competitions in
+                        2012—earning his fourth consecutive Ballon d'Or at just 25 years old.
+                    </div>
+                </details>
+
+                <details name="messi-career" class="milestone-card">
+                    <summary>
+                        <span class="m-year">2014 – 2015</span>
+                        <span class="m-title">The MSN Treble &amp; Second Champions League Crown as Talisman</span>
+                    </summary>
+                    <div class="m-body">
+                        Forming the legendary "MSN" trident alongside Luis Suárez and Neymar (122 combined goals in
+                        2014–15), Messi dismantled Bayern Munich in the UCL semifinals and delivered Barcelona's second
+                        European Treble in Berlin, claiming his 5th Ballon d'Or.
+                    </div>
+                </details>
+
+                <details name="messi-career" class="milestone-card">
+                    <summary>
+                        <span class="m-year">2021 – 2022</span>
+                        <span class="m-title">Maracanã Liberation &amp; The Lusail Coronation</span>
+                    </summary>
+                    <div class="m-body">
+                        In July 2021, Messi ended Argentina's 28-year trophy drought by winning the Copa América at the
+                        Maracanã. After sweeping Italy 3–0 in the 2022 Finalissima at Wembley, he produced a tournament
+                        for the ages at Qatar 2022—scoring in every knockout round and netting twice in the final
+                        against France to lift the FIFA World Cup.
+                    </div>
+                </details>
+
+                <details name="messi-career" class="milestone-card">
+                    <summary>
+                        <span class="m-year">2023 – 2026</span>
+                        <span class="m-title">8th Ballon d'Or, Back-to-Back Copa América &amp; Miami Dynasty</span>
+                    </summary>
+                    <div class="m-body">
+                        After capturing a record-extending 8th Ballon d'Or in October 2023 and defending Argentina's
+                        Copa América crown in 2024, Messi transformed Inter Miami CF into a powerhouse—capturing the
+                        Leagues Cup, the Supporters' Shield, the 2025 MLS Title, and the 2026 Campeones Cup while
+                        surpassing 100 goals for the club.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>Engineered with 100% Pure HTML5 &amp; CSS3 (Zero JavaScript) • Dedicated to Lionel Andrés Messi</p>
+    </footer>
+
+</body>
+
+</html>
