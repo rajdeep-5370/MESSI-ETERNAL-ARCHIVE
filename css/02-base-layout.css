@@ -130,7 +130,7 @@ body::after {
 
     /* True 3D black backing + Era neon aura behind the letters */
     filter:
-        drop-shadow(0 2px 2px #000000) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px var(--era-glow));
+        drop-shadow(0 2px 2px #e5c405) drop-shadow(0 6px 14px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 24px var(--era-glow));
 }
 
 .hero-subtitle {
