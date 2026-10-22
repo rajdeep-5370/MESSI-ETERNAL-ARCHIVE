@@ -1,0 +1,53 @@
+/* ==========================================================================
+   01-TOKENS-THEMES.CSS
+   Design Tokens & Relational :has() Era Theme Engine
+   ========================================================================== */
+
+:root {
+    --bg-dark: #06080e;
+    --bg-surface: rgba(15, 23, 42, 0.65);
+    --card-border: rgba(255, 255, 255, 0.12);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --gold: #eab308;
+
+    /* Default Active Era: La Albiceleste (Argentina) */
+    --era-primary: #38bdf8;
+    --era-secondary: #eab308;
+    --era-glow: rgba(56, 189, 248, 0.26);
+}
+
+/* FC Barcelona Theme */
+body:has(#era-barca:checked) {
+    --era-primary: #f43f5e;
+    --era-secondary: #2563eb;
+    --era-glow: rgba(244, 63, 94, 0.28);
+}
+
+/* Paris Saint-Germain Theme */
+body:has(#era-psg:checked) {
+    --era-primary: #60a5fa;
+    --era-secondary: #ef4444;
+    --era-glow: rgba(96, 165, 250, 0.26);
+}
+
+/* Inter Miami CF Theme */
+body:has(#era-miami:checked) {
+    --era-primary: #f472b6;
+    --era-secondary: #14b8a6;
+    --era-glow: rgba(244, 114, 182, 0.28);
+}
+
+/* Rosario & La Masia Origins Theme */
+body:has(#era-origins:checked) {
+    --era-primary: #ef4444;
+    --era-secondary: #f59e0b;
+    --era-glow: rgba(239, 68, 68, 0.26);
+}
+
+/* Hide Global State Radio Inputs */
+.era-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
