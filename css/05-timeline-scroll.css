@@ -4,86 +4,105 @@
    ========================================================================== */
 
 .timeline-panel {
-    grid-column: span 12;
+  grid-column: span 12;
 }
 
 .timeline-list {
-    margin-top: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-    border-left: 2px solid rgba(255, 255, 255, 0.14);
-    padding-left: 1.25rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.22);
+  padding-left: 1.25rem;
 }
 
 .milestone-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 16px;
-    padding: 1rem 1.25rem;
-    transition: border-color 0.25s ease, background 0.25s ease;
+  background: rgba(6, 10, 20, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  opacity: 1;
+  transition: border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.milestone-card:hover {
+  background: rgba(8, 14, 28, 0.85);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 .milestone-card[open] {
-    background: rgba(255, 255, 255, 0.06);
-    border-color: var(--era-primary);
+  background: rgba(8, 14, 28, 0.9);
+  border-color: var(--era-primary);
+  box-shadow: 0 0 20px var(--era-glow);
 }
 
 .milestone-card summary {
-    list-style: none;
-    cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.75rem;
-    font-weight: 700;
-    user-select: none;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  user-select: none;
 }
 
 .milestone-card summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 .m-year {
-    font-size: 0.75rem;
-    font-weight: 800;
-    padding: 0.25rem 0.6rem;
-    border-radius: 6px;
-    background: var(--era-primary);
-    color: #06080e;
+  font-size: 0.75rem;
+  font-weight: 900;
+  padding: 0.28rem 0.65rem;
+  border-radius: 6px;
+  background: var(--era-primary);
+  color: #050811;
+  text-shadow: none;
+  box-shadow: 0 0 12px var(--era-glow);
 }
 
 .m-title {
-    font-size: 1rem;
-    color: var(--text-main);
+  font-size: 1rem;
+  color: #ffffff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.95);
 }
 
 .m-body {
-    margin-top: 0.85rem;
-    padding-top: 0.85rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    line-height: 1.6;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  color: #f1f5f9;
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
-/* Progressive Enhancement: Native CSS Scroll-Driven Animations */
+/* Fixed Scroll-Driven Animation Range so bottom cards reach 100% opacity */
 @supports (animation-timeline: view()) {
-    @keyframes revealOnScroll {
-        from {
-            opacity: 0.15;
-            transform: translateY(24px) scale(0.98);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
+  @keyframes revealOnScroll {
+    from {
+      opacity: 0.35;
+      transform: translateY(16px);
     }
-
-    .milestone-card {
-        animation: revealOnScroll linear both;
-        animation-timeline: view();
-        animation-range: entry 5% cover 25%;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+
+  .milestone-card {
+    animation: revealOnScroll linear both;
+    animation-timeline: view();
+    /* Completes as soon as the card enters the bottom 12% of the screen */
+    animation-range: entry 0% cover 12%;
+  }
+
+  /* Guarantees the last card and any open card are always 100% solid */
+  .milestone-card:last-child,
+  .milestone-card[open] {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }
